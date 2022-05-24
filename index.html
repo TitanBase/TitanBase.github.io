@@ -1,1 +1,147 @@
-test
+<HTML>
+	<HEAD>
+		<TITLE>Titan Base Media</TITLE>
+		<LINK rel="stylesheet" href="style.css"/>
+		<SCRIPT>
+			function showContent(contentName){
+				var toShow = contentName;
+				console.log(toShow);
+				var contents = document.getElementsByTagName("content");
+				for (var i = 0; i < contents.length; i++){
+					if (contents[i].id.toLowerCase() == toShow){
+						contents[i].classList.add("visible-content");
+					} else {
+						contents[i].classList.remove("visible-content");
+					}
+				}
+			}
+			
+			function showDefaultContent(){
+				showContent("photo");
+			}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<HEADER>
+			<H1>TITAN BASE</H1>
+			<NAV onmouseup="showContent( event.target.innerText.toLowerCase() )">
+				<SPAN>PHOTO</SPAN>
+				<SPAN>RENDER</SPAN>
+				<SPAN>DESIGN</SPAN>
+				<SPAN>CONTACT</SPAN>
+			</NAV>
+		</HEADER>
+		<CONTENT id="photo">
+			<IMG src="photo/futureshock_1.jpg">
+			<IMG src="photo/emp1_sm.jpg"><BR>
+			<IMG src="photo/stairs1_sm.jpg"><BR>
+			<IMG src="photo/first_alley4_sm.jpg"><BR>
+			<IMG src="photo/mural1_sm.jpg"><BR>
+			<IMG src="photo/monorail2_sm.jpg"><BR>
+			
+			<SECTION style="position:fixed; right:0px;">
+				<DIV class="brag right">
+					<H2 class="">FUTURESHOCK</H2>
+					Shot in Seattle to promote upcoming shows for the hot local musical group Futureshock. For this shoot, the band explored the city to find locations that capture the collision of past, present, and future evoked by their music. Scroll to see mre.
+				</DIV>
+			</SECTION>
+		</CONTENT>
+		
+		<CONTENT id="render" class="visible-content">
+			
+			<SECTION>
+				<DIV class="brag right">
+					<H2 class="">HOLOMAP</H2>
+					A holographic topological map created using Blender's Shader Nodes. Vertical scanning adds physicality to the effect. 
+				</DIV>
+			
+				<div style="width:35vw">
+				
+					<div style="padding:56.25% 0 0 0;position:relative;">
+						<iframe src="https://player.vimeo.com/video/713098063?h=299206c4cf&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Holomap">
+						</iframe>
+					</div>
+					<script src="https://player.vimeo.com/api/player.js"></script>
+				
+				</div>
+			</SECTION>
+			
+			
+			<SECTION>
+				<DIV class="brag left">
+					<H2 class="blue-brag">CYBERDRIVE</H2>
+					Semi-dynamic landscape from EQ data, created in Blender without Python.
+				</DIV>
+			
+				<div style="width:35vw; position:absolute; right:0px;">
+				
+					<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/713107299?h=91cabb5224&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="CyberDrive5.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+				
+				</div>
+			</SECTION>
+			
+			
+			
+			<SECTION>
+				<DIV class="brag right">
+					<H2 class="blue-brag no-glow" style="color:#ff0; text-shadow: 0px 0px 2px 4px rgb(255,255,0);">INDUSTRIAL</H2>
+					A humanoid industrial robot created as an album cover. IK pistons track to the character's arms to simulate powered movement.
+				</DIV>
+				
+				<IMG src="render/Grasping3.png" style="max-width:34vw;"><BR>
+			</SECTION>
+			
+			<SECTION>
+				<DIV class="brag left">
+					<H2 class="red-brag no-glow">RADBOT</H2>
+					An radical 80s-style robot bartender created for an experiment in realtime VR puppeteering. Radbot was rendered in Blender's Eevee engine while being controlled via UDP from a simple Unity app.
+				</DIV>
+				
+				<IMG src="render/RadBot.jpg" style="max-width:34vw;"><BR>
+			</SECTION>
+			
+			
+		</CONTENT>
+		
+		
+		
+		
+		<CONTENT id="design">
+			<SECTION>
+				<DIV class="brag right">
+					<H2 class="blue-brag">EYE-CATCHING DESIGNS</H2>
+					Tell the world who you are with custom work in HTML5 and CSS. Highlight your logos and imagery with designs tailored to your content. 
+				</DIV>
+			</SECTION>
+			
+			<SECTION>
+				<DIV class="brag left">
+					<H2>MAKE IT DYNAMIC</H2>
+					Client-side JavaScript and PHP server scripting. Dynamic content presentation and instant loading create immersive expieriences that keep your visitors engaged with your site.
+				</DIV>
+			</SECTION>
+			
+			<SECTION>
+				<DIV class="brag right">
+					<H2 class="blue-brag">LIGHT & RESPONSIVE</H2>
+					Scalable designs and lightweight code provide a lightning-fast experience for users on all device classes. Provide a site that respects your visitors' resources and they'll leave it open all day, visit more readily, and share it more widely.
+				</DIV>
+			</SECTION>
+		</CONTENT>
+		
+		<CONTENT id="contact">
+			<SECTION>
+				<DIV class="brag right">
+					<H2 class="">OPEN COMMUNICATIONS</H2>
+					TitanBaseX@protonmail.com<BR>
+					
+				</DIV>
+			</SECTION>
+		</CONTENT>
+		
+		
+		<SCRIPT>
+			showDefaultContent();
+		</SCRIPT>
+	</BODY>
+</HTML>
