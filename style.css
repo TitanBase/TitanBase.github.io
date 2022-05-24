@@ -90,6 +90,7 @@ nav {
 }
 nav span {
 	margin-right:1vw;
+	cursor: pointer;
 }
 
 content {
