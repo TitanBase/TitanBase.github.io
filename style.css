@@ -1,0 +1,175 @@
+
+/* ******************** */
+/* ***** CSS RESET***** */
+/* ******************** */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ******************** */
+/* *** END CSS RESET*** */
+/* ******************** */
+
+@font-face {
+  font-family: Raleway;
+  src: url(Raleway-VariableFont_wght.ttf);
+  font-weight:100;
+}
+
+
+body {
+	background: url("skew_view.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-family: "Raleway", sans-serif;
+}
+
+header {
+	display: inline-block;
+	padding:0;
+	margin:1vw;
+	background: rgba(16, 16, 16,0.75); 
+	box-shadow:0px 0px 2vw 2vw rgba(16,16,16,0.75);
+}
+
+h1 {
+	font-size: calc( 8vw );
+	margin:0px; padding:0 0 0 1vw;
+	color: #f0f;
+	text-shadow:0px 0px 4px rgb(255, 0, 255), 0px 0px 8px rgb(255, 0, 255);
+}
+
+nav {
+	font-size: calc( 2.5vw );
+	color: #48f;
+	margin:0px; padding:0 0 0 1vw;
+	text-shadow:0px 0px 4px rgb(64, 64, 255), 0px 0px 8px rgb(64, 64, 255);
+}
+nav span {
+	margin-right:1vw;
+}
+
+content {
+	position:fixed;
+	top:12vw;
+	left:0px; right:-31px; bottom:0px;
+	background:rgba(0,0,0,0);
+	padding-top:5vw;
+	-webkit-mask-image: linear-gradient( 0deg, rgba(0,0,0,1) 90%, rgba(0,0,0,0)  );
+	overflow-y:scroll;
+	
+	display:none;
+}
+
+section {
+	padding: 2vw 0 2vw 0;
+	height:200px;
+}
+
+.brag h2 {
+	font-size: calc( 3vw );
+	color: #f5f;
+	text-shadow:0px 0px 2px rgb(255, 0, 255), 0px 0px 4px rgb(255, 0, 255);
+	margin-bottom:1vw;
+}
+h2.blue-brag {
+	color: #48f;
+	text-shadow:0px 0px 2px rgb(64, 128, 255), 0px 0px 4px rgb(64, 128, 255);
+}
+h2.red-brag {
+	color: #f00;
+	text-shadow:0px 0px 2px rgb(255, 0, 0), 0px 0px 4px rgb(255, 0, 0);
+}
+@media screen and (min-width: 1024px) {
+  .brag h2 {
+     font-size: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .brag h2 {
+     font-size: 16px;
+  }
+}
+
+.brag {
+	display:inline-block;
+	float:right;
+	padding:2vw;
+	width:60vw;
+	background:rgba(0,0,0,0.65);
+	color:#fff;
+	line-height: 2rem;
+	letter-spacing:1.1;
+}
+
+.brag.left {
+	float:left;
+	padding-left:4vw;
+}
+
+.brag.right {
+	float:right;
+	padding-right:4vw;
+}
+
+.visible-content {display:block;}
+
+
+
+#photo img, #render .gfycat {
+	max-height:calc( 100% - 3vw );
+	max-width: 50%;
+	float:left;
+	clear:both;
+	z-index:-1;
+	margin-bottom:4vw;
+}
+#render img {
+	max-height:24vw;
+}
+#render section, #render img {
+	margin-bottom:10vw;
+}
