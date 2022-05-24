@@ -10,6 +10,7 @@
 				for (var i = 0; i < contents.length; i++){
 					if (contents[i].id.toLowerCase() == toShow){
 						contents[i].classList.add("visible-content");
+						history.pushState({},"","index.html?page="+toShow);
 					} else {
 						contents[i].classList.remove("visible-content");
 					}
@@ -17,7 +18,14 @@
 			}
 			
 			function showDefaultContent(){
-				showContent("photo");
+				var contentToShow = "photos";
+				
+				var params = new URLSearchParams(location.search);
+				if ( params.has("page") ){
+					contentToShow = params.get("page");
+				}
+				
+				showContent( contentToShow );
 			}
 		</SCRIPT>
 	</HEAD>
