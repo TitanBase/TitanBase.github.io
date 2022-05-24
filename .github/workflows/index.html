@@ -10,7 +10,7 @@
 				for (var i = 0; i < contents.length; i++){
 					if (contents[i].id.toLowerCase() == toShow){
 						contents[i].classList.add("visible-content");
-						history.pushState({},"","index.html?page="+toShow);
+						history.pushState({},"","index.html?page="+toShow); //Add bookmarkable page id.
 					} else {
 						contents[i].classList.remove("visible-content");
 					}
